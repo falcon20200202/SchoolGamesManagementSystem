@@ -5,6 +5,42 @@
 #include<stdio.h>
 #include<stdlib.h>
 #include<string.h>
+//#include<mysql/mysql.h>
+//
+//// 初始化并连接到 MySQL 数据库
+//MYSQL* connect_db() {
+//	MYSQL* conn = mysql_init(NULL);
+//
+//	if (conn == NULL) {
+//		fprintf(stderr, "mysql_init() failed\n");
+//		return NULL;
+//	}
+//
+//	if (mysql_real_connect(conn, "localhost", "username", "password", "database_name", 0, NULL, 0) == NULL) {
+//		fprintf(stderr, "mysql_real_connect() failed\n");
+//		mysql_close(conn);
+//		return NULL;
+//	}
+//
+//	return conn;
+//}
+//
+//void create_table(MYSQL* conn) {
+//	const char* query = "CREATE TABLE IF NOT EXISTS athletes ("
+//		"id INT AUTO_INCREMENT PRIMARY KEY, "
+//		"name VARCHAR(100), "
+//		"age INT, "
+//		"gender ENUM('M', 'F'), "
+//		"event VARCHAR(100), "
+//		"result FLOAT)";
+//
+//	if (mysql_query(conn, query)) {
+//		fprintf(stderr, "Table creation failed: %s\n", mysql_error(conn));
+//	}
+//	else {
+//		printf("Table created successfully!\n");
+//	}
+//}
 
 
 
@@ -252,7 +288,7 @@ void gxyzfcx()
 		}
 		printf("1.电子工程\n2.传播\n3.生命科学\n4.机电工程\n5.中俄\6.数学\n7.返回\n");
 		printf("请输入序号\n");
-		scanf_s("%d", &n);
+		scanf("%d", &n);
 	}
 }
 
